@@ -1,11 +1,15 @@
 package com.pyr.controller;
 
+import com.pyr.pojo.User;
 import com.pyr.result.CodeMsg;
 import com.pyr.result.Result;
+import com.pyr.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 使用@Controller而不用@RESTController是因为这里返回一个页面而不是一个值，如果只是使用@RestController注解Controller
@@ -14,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
+
+    @Autowired
+    UserService userService;
 
     @GetMapping("/")
     public String index() {
@@ -34,5 +41,12 @@ public class HelloController {
     public String thymeleaf(Model model) {
         model.addAttribute("name", "张三");
         return "index";
+    }
+
+    @RequestMapping("/db/get")
+    @ResponseBody
+    public  Result<User> getUser(){
+        User user = userService.getById(1);
+        return Result.success(user);
     }
 }
