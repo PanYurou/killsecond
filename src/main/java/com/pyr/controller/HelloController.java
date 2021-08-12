@@ -23,16 +23,19 @@ public class HelloController {
     UserService userService;
 
     @GetMapping("/")
+    @ResponseBody
     public String index() {
         return "Greetings from Spring Boot!";
     }
 
     @RequestMapping("/success")
+    @ResponseBody
     public Result<String> success() {
         return Result.success("hello world!");
     }
 
     @RequestMapping("/error")
+    @ResponseBody
     public Result<String> error() {
         return Result.error(CodeMsg.SERVER_ERROR);
     }
