@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>商品信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<div class="panel panel-default">
+    <div class="panel-heading">商品详情</div>
+    <table class="table" id="goodslist">
+        <tr>
+            <td>商品名称</td>
+            <td>商品原价</td>
+            <td>秒杀价</td>
+            <td>库存数量</td>
+            <td>详情</td>
+        </tr>
+        <td th:text="${goods.name}"></td>
+        <td th:text="${goods.price}"></td>
+        <td th:text="${goods.miaoshaPrice}"></td>
+        <td th:text="${goods.amount}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

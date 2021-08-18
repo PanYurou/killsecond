@@ -16,4 +16,8 @@ public class GoodsService {
     public List<GoodsVo> listGoodsVo() {
         return goodsMapper.listGoodsVo();
     }
+
+    public GoodsVo findGoodById(long goodsId) {
+        return goodsMapper.findGoodById(goodsId);
+    }
 }
