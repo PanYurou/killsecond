@@ -4,6 +4,7 @@ import com.pyr.pojo.OrderInfo;
 import com.pyr.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class MiaoshaService {
@@ -12,6 +13,7 @@ public class MiaoshaService {
     @Autowired
     OrderInfoService orderInfoService;
 
+    @Transactional
     public OrderInfo miaohsa(long goodsId, User user) {
 //    1.查看是否有余量
 //    2.查看是否已经秒杀过了该商品

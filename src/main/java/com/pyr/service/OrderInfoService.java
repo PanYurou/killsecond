@@ -8,6 +8,7 @@ import com.pyr.pojo.OrderInfo;
 import com.pyr.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -19,6 +20,7 @@ public class OrderInfoService {
     @Autowired
     GoodsMapper goodsMapper;
 
+    @Transactional
     public OrderInfo createOrder(User user, long goodsId) {
         Goods goods = goodsMapper.findGoodById(goodsId);
         OrderInfo orderInfo = new OrderInfo();
