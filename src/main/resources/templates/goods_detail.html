@@ -14,7 +14,12 @@
             <td>商品原价</td>
             <td>秒杀价</td>
             <td>库存数量</td>
-            <td>详情</td>
+            <td>
+                <form id="miaosha" method="post" action="/miaosha/do_miaosha">
+                    <button class="btn btn-primary" type="submit"> 立即秒杀</button>
+                    <input type="hidden" name="goodsId" th:value="${goods.id}"/>
+                </form>
+            </td>
         </tr>
         <td th:text="${goods.name}"></td>
         <td th:text="${goods.price}"></td>

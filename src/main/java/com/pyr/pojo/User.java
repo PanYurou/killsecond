@@ -2,7 +2,7 @@ package com.pyr.pojo;
 
 
 public class User {
-    private int id;
+    private long id;
     private String name;
 
     public User(int id, String name) {
@@ -13,7 +13,7 @@ public class User {
     public User() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

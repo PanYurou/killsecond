@@ -8,7 +8,7 @@ public class OrderInfo {
     private Long userId;
     private Long goodsId;
     private String goodsName;
-    private Integer goodsMount;
+    private Integer goodsCount;
     private Double goodsPrice;
     private Integer paymentType;
     private Integer status;
@@ -38,13 +38,6 @@ public class OrderInfo {
         this.userId = userId;
     }
 
-    public Long getGoodsId() {
-        return goodsId;
-    }
-
-    public void setGoodsId(Long goodsId) {
-        this.goodsId = goodsId;
-    }
 
     public String getGoodsName() {
         return goodsName;
@@ -54,13 +47,6 @@ public class OrderInfo {
         this.goodsName = goodsName;
     }
 
-    public Integer getGoodsMount() {
-        return goodsMount;
-    }
-
-    public void setGoodsMount(Integer goodsMount) {
-        this.goodsMount = goodsMount;
-    }
 
     public Double getGoodsPrice() {
         return goodsPrice;
@@ -92,5 +78,21 @@ public class OrderInfo {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public Integer getGoodsCount() {
+        return goodsCount;
+    }
+
+    public void setGoodsCount(Integer goodsCount) {
+        this.goodsCount = goodsCount;
+    }
+
+    public Long getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(Long goodsId) {
+        this.goodsId = goodsId;
     }
 }

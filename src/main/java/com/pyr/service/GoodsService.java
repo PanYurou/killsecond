@@ -20,4 +20,8 @@ public class GoodsService {
     public GoodsVo findGoodById(long goodsId) {
         return goodsMapper.findGoodById(goodsId);
     }
+
+    public void reduceAamount(long goodsId) {
+        goodsMapper.reduceAamount(goodsId);
+    }
 }
