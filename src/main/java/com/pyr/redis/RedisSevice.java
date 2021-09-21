@@ -12,7 +12,7 @@ public class RedisSevice {
     @Autowired
     JedisPool jedisPool;
 
-    public <T> boolean set(String key, T values) {
+    public <T>  boolean set(String key, T values) {
         String value = JSON.toJSONString(values);
         ;
         Jedis jedis = jedisPool.getResource();
